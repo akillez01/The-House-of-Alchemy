@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>A Casa da Alquimia - Loja</title>
+  <link rel="stylesheet" href="../CSS/style.css" />
+  <link rel="stylesheet" href="../CSS/loja.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Croissant+One&family=Mooli&family=Mukta:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,1,0" />
+  <style>
+    /* Estilos para o modal */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal-content {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .modal-content img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .close-modal {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      color: white;
+      font-size: 30px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <!-- Container -->
+  <div class="container">
+    <!-- Navigation -->
+    <nav class="navbar multi-page-nav">
+      <!-- Logo -->
+      <a href="index.html">
+        <div class="logo">
+          <span>Alquimia <span>Loja</span></span>
+          <span>Artigos Personalizados</span>
+        </div>
+      </a>
+      <!-- End of Logo -->
+
+      <!-- Menu Icon -->
+      <div class="menu-icon icon-pages">
+        <div class="line line-1"></div>
+        <div class="line line-2"></div>
+      </div>
+      <!-- End of Menu Icon -->
+
+      <!-- Nav Items -->
+      <ul class="nav-items">
+        <li class="nav-item">
+          <a href="index.html" class="nav-link">Início</a>
+        </li>
+        <li class="nav-item">
+          <a href="blog.html" class="nav-link">Blog</a>
+        </li>
+        <li class="nav-item">
+          <a href="loja.html" class="nav-link">Loja</a>
+        </li>
+        <li class="nav-item">
+          <a href="contact.html" class="nav-link">Contato</a>
+        </li>
+        <li class="nav-item">
+          <a href="account.html" class="nav-link">Conta</a>
+        </li>
+        <li class="nav-item">
+          <a href="donation.html" class="nav-btn">Doar</a>
+        </li>
+      </ul>
+      <!-- End of Nav Items -->
+    </nav>
+    <!-- End of Navigation -->
+
+    <!-- Products -->
+    <section class="products-section">
+      <div class="products-wrapper">
+        <div class="products-header">
+          <h1>Loja Alquimia</h1>
+          <h3>Artigos Personalizados para o seu Bem-Estar</h3>
+        </div>
+
+        <!-- Filtros de Categorias -->
+        <div class="filter-nav">
+          <a href="#" class="filter-nav-link active" data-type="all">Todos</a>
+          <a href="#" class="filter-nav-link" data-type="camisas">Camisas</a>
+          <a href="#" class="filter-nav-link" data-type="bones">Bonés</a>
+          <a href="#" class="filter-nav-link" data-type="maracas">Maracas</a>
+          <a href="#" class="filter-nav-link" data-type="xicaras">Xícaras</a>
+        </div>
+
+        <!-- Lista de Produtos -->
+        <div class="products-list">
+          <!-- Camisas -->
+          <div class="product" data-type="camisas">
+            <div class="product-images">
+              <img src="../public/alquimia.jpeg" alt="Camisa 1" class="active" data-fullsize="../public/alquimia.jpeg" />
+              <img src="../public/alquimia.jpeg" alt="Camisa 2" data-fullsize="../public/alquimia.jpeg" />
+              <img src="../public/alquimia.jpeg" alt="Camisa 3" data-fullsize="../public/alquimia.jpeg" />
+            </div>
+            <button type="button" class="product-btn">Comprar Agora</button>
+          </div>
+
+          <!-- Bonés -->
+          <div class="product" data-type="bones">
+            <div class="product-images">
+              <img src="../public/alquimia.jpeg" alt="Boné 1" class="active" data-fullsize="../public/alquimia.jpeg" />
+              <img src="../public/alquimia.jpeg" alt="Boné 2" data-fullsize="../public/alquimia.jpeg" />
+              <img src="../public/alquimia.jpeg" alt="Boné 3" data-fullsize="../public/alquimia.jpeg" />
+            </div>
+            <button type="button" class="product-btn">Comprar Agora</button>
+          </div>
+
+          <!-- Maracas -->
+          <div class="product" data-type="maracas">
+            <div class="product-images">
+              <img src="../public/alquimia.jpeg" alt="Maraca 1" class="active" data-fullsize="../public/alquimia.jpeg" />
+              <img src="../public/alquimia.jpeg" alt="Maraca 2" data-fullsize="../public/alquimia.jpeg" />
+              <img src="../public/alquimia.jpeg" alt="Maraca 3" data-fullsize="../public/alquimia.jpeg" />
+            </div>
+            <button type="button" class="product-btn">Comprar Agora</button>
+          </div>
+
+          <!-- Xícaras -->
+          <div class="product" data-type="xicaras">
+            <div class="product-images">
+              <img src="../public/alquimia.jpeg" alt="Xícara 1" class="active" data-fullsize="../public/alquimia.jpeg" />
+              <img src="../public/alquimia.jpeg" alt="Xícara 2" data-fullsize="../public/alquimia.jpeg" />
+              <img src="../public/alquimia.jpeg" alt="Xícara 3" data-fullsize="../public/alquimia.jpeg" />
+            </div>
+            <button type="button" class="product-btn">Comprar Agora</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modal para exibir a imagem ampliada -->
+    <div class="modal" id="imageModal">
+      <span class="close-modal" id="closeModal">&times;</span>
+      <div class="modal-content">
+        <img id="modalImage" src="" alt="Imagem Ampliada" />
+      </div>
+    </div>
+
+    <!-- Footer -->
+<footer>
+  <div class="footer-content">
+    <div class="footer-top">
+      <div class="footer-social-media footer-item">
+        <h3>Siga-nos</h3>
+        <div class="icons">
+          <a href="https://www.facebook.com/casadaalquimia/?locale=pt_BR" target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+          <a href="https://www.instagram.com/casadaalquimia?igsh=bXp2anV1ejQwbGUy" target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="https://www.youtube.com/@ACasadaAlquimia" target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-youtube"></i>
+          </a>
+        </div>
+      </div>
+      <div class="footer-item">
+        <h3>Recursos</h3>
+        <a href="#">Meditação Guiada</a>
+        <a href="#">Terapias Energéticas</a>
+        <a href="#">Yoga e Mindfulness</a>
+        <a href="#">Cristais e Pedras</a>
+        <a href="#">Workshops</a>
+        <a href="#">Autoconhecimento</a>
+      </div>
+      <div class="footer-item">
+        <h3>Serviços</h3>
+        <a href="#">Reiki</a>
+        <a href="#">Florais de Bach</a>
+        <a href="#">Massagem Terapêutica</a>
+        <a href="#">Retiros Espirituais</a>
+        <a href="#">Consultas</a>
+      </div>
+      <div class="footer-item">
+        <h3>Empresa</h3>
+        <a href="#">Sobre Nós</a>
+        <a href="#">Blog</a>
+        <a href="#">Trabalhe Conosco</a>
+        <a href="#">Contato</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <a href="index.html">Início</a>
+      <a href="blog.html">Blog</a>
+      <a href="loja.html">Loja</a>
+      <a href="contato.html">Contato</a>
+      <a href="conta.html">Conta</a>
+      <a href="doar.html">Doar</a>
+    </div>
+  </div>
+</footer>
+<!-- End of Footer -->
+  </div>
+  <!-- End of Container -->
+
+  <!-- Scripts -->
+  <script>
+    // Função para trocar as imagens ao clicar
+    document.querySelectorAll(".product-images img").forEach((image) => {
+      image.addEventListener("click", () => {
+        const productContainer = image.closest(".product-images");
+        productContainer.querySelectorAll("img").forEach((img) => {
+          img.classList.remove("active");
+        });
+        image.classList.add("active");
+      });
+    });
+
+    // Função para filtrar os produtos
+    document.querySelectorAll(".filter-nav-link").forEach((link) => {
+      link.addEventListener("click", (e) => {
+        e.preventDefault();
+        const type = link.getAttribute("data-type");
+
+        // Remove a classe 'active' de todos os links
+        document.querySelectorAll(".filter-nav-link").forEach((link) => {
+          link.classList.remove("active");
+        });
+
+        // Adiciona a classe 'active' ao link clicado
+        link.classList.add("active");
+
+        // Filtra os produtos
+        document.querySelectorAll(".product").forEach((product) => {
+          if (type === "all" || product.getAttribute("data-type") === type) {
+            product.style.display = "block";
+          } else {
+            product.style.display = "none";
+          }
+        });
+      });
+    });
+
+    // Função para abrir o modal com a imagem ampliada
+    const modal = document.getElementById("imageModal");
+    const modalImage = document.getElementById("modalImage");
+    const closeModal = document.getElementById("closeModal");
+
+    document.querySelectorAll(".product-images img").forEach((image) => {
+      image.addEventListener("click", () => {
+        const fullSizeSrc = image.getAttribute("data-fullsize");
+        modalImage.src = fullSizeSrc;
+        modal.style.display = "flex";
+      });
+    });
+
+    // Fechar o modal ao clicar no botão de fechar
+    closeModal.addEventListener("click", () => {
+      modal.style.display = "none";
+    });
+
+    // Fechar o modal ao clicar fora da imagem
+    window.addEventListener("click", (e) => {
+      if (e.target === modal) {
+        modal.style.display = "none";
+      }
+    });
+  </script>
+  <script src="../JS/products.js"></script>
+  <script src="../JS/script.js"></script>
+</body>  
+</html>

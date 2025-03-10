@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Donate to Our Institution</title>
+    <link rel="stylesheet" href="../CSS/style.css" />
+    <link rel="stylesheet" href="../CSS/donation.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Croissant+One&family=Mooli&family=Mukta:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,1,0"
+    />
+    <!-- Stripe.js -->
+    <script src="https://js.stripe.com/v3/"></script>
+  </head>
+  <body>
+    <!-- Container -->
+    <div class="container">
+      <!-- Navigation -->
+      <nav class="navbar multi-page-nav">
+        <!-- Logo -->
+        <a href="index.html">
+          <div class="logo">
+            <span>A Casa da Alquimia</span>
+            <span>Spirituality</span>
+          </div>
+        </a>
+        <!-- End of Logo -->
+
+        <!-- Menu Icon -->
+        <div class="menu-icon icon-pages">
+          <div class="line line-1"></div>
+          <div class="line line-2"></div>
+        </div>
+        <!-- End of Menu Icon -->
+
+        <!-- Nav Items -->
+        <ul class="nav-items">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">Início</a>
+            <!-- Dropdown 1 -->
+            <div class="dropdown dropdown-1">
+              <div class="dropdown-1-left">
+                <h3>Práticas Espirituais</h3>
+                <div class="features-list">
+                  <div class="features-list-item">
+                    <i class="fa-solid fa-spa"></i>
+                    <span>Meditação Guiada</span>
+                  </div>
+                  <div class="features-list-item">
+                    <i class="fa-solid fa-leaf"></i>
+                    <span>Yoga e Relaxamento</span>
+                  </div>
+                  <div class="features-list-item">
+                    <i class="fa-solid fa-hand-holding-heart"></i>
+                    <span>Terapias Holísticas</span>
+                  </div>
+                  <div class="features-list-item">
+                    <i class="fa-solid fa-crystal"></i>
+                    <span>Cristais e Energias</span>
+                  </div>
+                </div>
+              </div>
+              <div class="dropdown-1-right">
+                <h3>Serviços</h3>
+                <div class="dropdown-services">
+                  <div class="dropdown-service">
+                    <i class="fa-solid fa-moon"></i>
+                    <div class="dropdown-service-item">
+                      <span>Retiros Espirituais</span>
+                      <span>Imersões de Autoconhecimento</span>
+                    </div>
+                  </div>
+                  <div class="dropdown-service">
+                    <i class="fa-solid fa-users"></i>
+                    <div class="dropdown-service-item">
+                      <span>Workshops</span>
+                      <span>Aprenda Práticas Espirituais</span>
+                    </div>
+                  </div>
+                  <div class="dropdown-service">
+                    <i class="fa-solid fa-heart"></i>
+                    <div class="dropdown-service-item">
+                      <span>Consultas</span>
+                      <span>Orientação Espiritual</span>
+                    </div>
+                  </div>
+                </div>
+                <button type="button">Participe</button>
+              </div>
+            </div>
+            <!-- End of Dropdown 1 -->
+          </li>
+          <li class="nav-item">
+            <a href="blog.html" class="nav-link">Blog</a>
+            <!-- Dropdown 2 -->
+            <div class="dropdown dropdown-2">
+              <div class="clients-item">
+                <i class="fa-solid fa-book"></i>
+                <h3>Artigos Inspiradores</h3>
+                <p>
+                  Explore artigos sobre meditação, autoconhecimento e bem-estar espiritual.
+                </p>
+              </div>
+              <div class="clients-item">
+                <i class="fa-solid fa-video"></i>
+                <h3>Vídeos Educativos</h3>
+                <p>
+                  Assista a vídeos sobre práticas espirituais e dicas para uma vida equilibrada.
+                </p>
+              </div>
+              <div class="clients-item">
+                <i class="fa-solid fa-podcast"></i>
+                <h3>Podcasts</h3>
+                <p>
+                  Ouça conversas sobre espiritualidade e desenvolvimento pessoal.
+                </p>
+              </div>
+            </div>
+            <!-- End of Dropdown 2 -->
+          </li>
+          <li class="nav-item">
+          <a href="loja.html" class="nav-link">Loja</a>
+            <!-- Dropdown 3 -->
+            <div class="dropdown dropdown-3">
+              <div class="products">
+                <div class="product">
+                  <i class="fa-solid fa-crystal"></i>
+                  <div>
+                    <span>Cristais e Pedras</span>
+                    <span>Energize seu espaço com cristais.</span>
+                  </div>
+                </div>
+                <div class="product">
+                  <i class="fa-solid fa-candle-holder"></i>
+                  <div>
+                    <span>Velas e Incensos</span>
+                    <span>Ambientes harmonizados e purificados.</span>
+                  </div>
+                </div>
+                <div class="product">
+                  <i class="fa-solid fa-book-open"></i>
+                  <div>
+                    <span>Livros Espirituais</span>
+                    <span>Conhecimento para a jornada interior.</span>
+                  </div>
+                </div>
+                <div class="product">
+                  <i class="fa-solid fa-yin-yang"></i>
+                  <div>
+                    <span>Kits de Meditação</span>
+                    <span>Tudo para sua prática diária.</span>
+                  </div>
+                </div>
+              </div>
+              <button type="button">Ver Produtos</button>
+            </div>
+            <!-- End of Dropdown 3 -->
+          </li>
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link">Contato</a>
+            <!-- Dropdown 4 -->
+            <div class="dropdown dropdown-4">
+              <div class="contact-options">
+                <div>
+                  <i class="fa-solid fa-envelope"></i>
+                  <span>Envie uma Mensagem</span>
+                </div>
+                <div>
+                  <i class="fa-solid fa-comments"></i>
+                  <span>Chat Online</span>
+                </div>
+                <div>
+                  <i class="fa-solid fa-calendar"></i>
+                  <span>Agende uma Consulta</span>
+                </div>
+              </div>
+              <button type="button">Fale Conosco</button>
+            </div>
+            <!-- End of Dropdown 4 -->
+          </li>
+          <li class="nav-item">
+            <a href="account.html" class="nav-link">Conta</a>
+            <!-- Dropdown 5 -->
+            <div class="dropdown dropdown-5">
+              <form class="account-form">
+                <div class="account-input-group">
+                  <input type="text" placeholder="Nome" />
+                  <input type="password" placeholder="Senha" />
+                </div>
+                <div class="check">
+                  <input type="checkbox" id="check" />
+                  <label for="check">Lembre-me</label>
+                </div>
+                <button type="button">Entrar</button>
+                <p>Sair <span>Usuário</span> or <span>senha</span>?</p>
+              </form>
+            </div>
+            <!-- End of Dropdown 5 -->
+          </li>
+          <li class="nav-item">
+            <a href="donation.html" class="nav-btn">Doar</a>
+          </li>
+        </ul>
+        <!-- End of Nav Items -->
+      </nav>
+      <!-- End of Navigation -->
+
+      <!-- Donation Section -->
+      <section class="donation">
+        <div class="donation-wrapper">
+          <div class="donation-shapes">
+            <div class="donation-rectangle"></div>
+            <div class="donation-small-circle"></div>
+            <div class="donation-large-circle"></div>
+          </div>
+          <div class="donation-header">
+            <h1>Support Our Cause</h1>
+            <h3>
+              Your donation helps us continue our mission. Every contribution, no matter the size,
+              makes a difference.
+            </h3>
+          </div>
+          <div class="donation-cards">
+            <div class="donation-card">
+              <div class="donation-card-top">
+                <h3>One-Time Donation</h3>
+                <h1>$25</h1>
+              </div>
+              <ul class="donation-card-list">
+                <li>Supports immediate needs</li>
+                <li>Helps fund ongoing projects</li>
+                <li>Makes a direct impact</li>
+              </ul>
+              <button id="donate-25" class="donation-card-btn">Donate Now</button>
+            </div>
+            <div class="donation-card">
+              <div class="donation-card-top">
+                <h3>Monthly Donation</h3>
+                <h1>$10/month</h1>
+              </div>
+              <ul class="donation-card-list">
+                <li>Sustains long-term projects</li>
+                <li>Provides consistent support</li>
+                <li>Helps plan for the future</li>
+              </ul>
+              <button id="donate-monthly" class="donation-card-btn">Donate Monthly</button>
+            </div>
+            <div class="donation-card">
+              <div class="donation-card-top">
+                <h3>Custom Donation</h3>
+                <h1>Any Amount</h1>
+              </div>
+              <ul class="donation-card-list">
+                <li>Choose your own amount</li>
+                <li>Every dollar counts</li>
+                <li>Make a personalized impact</li>
+              </ul>
+              <button id="donate-custom" class="donation-card-btn">Donate Custom Amount</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End of Donation Section -->
+
+      <!-- Footer -->
+<footer>
+  <div class="footer-content">
+    <div class="footer-top">
+      <div class="footer-social-media footer-item">
+        <h3>Siga-nos</h3>
+        <div class="icons">
+          <a href="https://www.facebook.com/casadaalquimia/?locale=pt_BR" target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+          <a href="https://www.instagram.com/casadaalquimia?igsh=bXp2anV1ejQwbGUy" target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="https://www.youtube.com/@ACasadaAlquimia" target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-youtube"></i>
+          </a>
+        </div>
+      </div>
+      <div class="footer-item">
+        <h3>Recursos</h3>
+        <a href="#">Meditação Guiada</a>
+        <a href="#">Terapias Energéticas</a>
+        <a href="#">Yoga e Mindfulness</a>
+        <a href="#">Cristais e Pedras</a>
+        <a href="#">Workshops</a>
+        <a href="#">Autoconhecimento</a>
+      </div>
+      <div class="footer-item">
+        <h3>Serviços</h3>
+        <a href="#">Reiki</a>
+        <a href="#">Florais de Bach</a>
+        <a href="#">Massagem Terapêutica</a>
+        <a href="#">Retiros Espirituais</a>
+        <a href="#">Consultas</a>
+      </div>
+      <div class="footer-item">
+        <h3>Empresa</h3>
+        <a href="#">Sobre Nós</a>
+        <a href="#">Blog</a>
+        <a href="#">Trabalhe Conosco</a>
+        <a href="#">Contato</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <a href="index.html">Início</a>
+      <a href="blog.html">Blog</a>
+      <a href="produtos.html">Loja</a>
+      <a href="contato.html">Contato</a>
+      <a href="conta.html">Conta</a>
+      <a href="precos.html">Doar</a>
+    </div>
+  </div>
+</footer>
+<!-- End of Footer -->
+    </div>
+    <!-- End of Container -->
+
+    <!-- Stripe Integration Script -->
+    <script>
+      const stripe = Stripe('your-publishable-key-here'); // Replace with your Stripe publishable key
+
+      const donateButtons = document.querySelectorAll('.donation-card-btn');
+
+      donateButtons.forEach((button) => {
+        button.addEventListener('click', async (e) => {
+          const amount = e.target.id === 'donate-custom' ? prompt('Enter your custom amount:') : e.target.id.split('-')[1];
+
+          if (!amount || isNaN(amount)) {
+            alert('Please enter a valid amount.');
+            return;
+          }
+
+          try {
+            const response = await fetch('/create-checkout-session', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+              },
+              body: JSON.stringify({ amount: amount * 100 }), // Convert to cents
+            });
+
+            const session = await response.json();
+
+            const result = await stripe.redirectToCheckout({
+              sessionId: session.id,
+            });
+
+            if (result.error) {
+              alert(result.error.message);
+            }
+          } catch (error) {
+            console.error('Error:', error);
+          }
+        });
+      });
+    </script>
+    <!-- End of Stripe Integration Script -->
+
+    <script src="../JS/script.js"></script>
+  </body>
+</html>
