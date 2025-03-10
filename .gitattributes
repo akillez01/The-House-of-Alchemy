@@ -1,1 +1,2 @@
 videos/feitiovideo.mp4 filter=lfs diff=lfs merge=lfs -text
+HTML/videos/feitiovideo.mp4 filter=lfs diff=lfs merge=lfs -text
