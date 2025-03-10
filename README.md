@@ -57,3 +57,6 @@ Bem-vindo ao projeto "A Casa da Alquimia", um site responsivo focado em espiritu
 1. Clone o repositório:
    ```bash
    git clone https://github.com/seu-usuario/responsive-website.git
+
+
+   ###########
