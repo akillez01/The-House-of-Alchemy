@@ -1,0 +1,104 @@
+Claro, aqui está a lista de todos os comandos usados para resolver os problemas e fazer o deploy do seu projeto para o GitHub Pages:
+
+### Configuração do Git LFS
+
+1. **Instalar o Git LFS:**
+   ```sh
+   sudo apt-get install git-lfs
+   ```
+
+2. **Inicializar o Git LFS no repositório:**
+   ```sh
+   git lfs install
+   ```
+
+3. **Adicionar o arquivo grande ao Git LFS:**
+   ```sh
+   git lfs track "HTML/videos/feitiovideo.mp4"
+   ```
+
+4. **Adicionar as mudanças ao Git:**
+   ```sh
+   git add .gitattributes
+   git add HTML/videos/feitiovideo.mp4
+   ```
+
+5. **Fazer o commit das mudanças:**
+   ```sh
+   git commit -m "Adiciona feitiovideo.mp4 ao Git LFS"
+   ```
+
+6. **Empurrar as mudanças para o repositório remoto:**
+   ```sh
+   git push origin main
+   ```
+
+### Remover o Arquivo Grande do Histórico do Git
+
+1. **Remover o arquivo grande do histórico do Git:**
+   ```sh
+   git filter-branch --force --index-filter 'git rm --cached --ignore-unmatch HTML/videos/feitiovideo.mp4' --prune-empty --tag-name-filter cat -- --all
+   ```
+
+2. **Limpar e reescrever o histórico do repositório:**
+   ```sh
+   rm -rf .git/refs/original/
+   git reflog expire --expire=now --all
+   git gc --prune=now
+   git gc --aggressive --prune=now
+   ```
+
+### Resolver Branches Divergentes
+
+1. **Configurar o Git para usar merge:**
+   ```sh
+   git config pull.rebase false
+   ```
+
+2. **Fazer o pull das mudanças remotas:**
+   ```sh
+   git pull origin gh-pages
+   ```
+
+3. **Fazer o push das mudanças:**
+   ```sh
+   git push origin gh-pages
+   ```
+
+### Deploy para o GitHub Pages
+
+1. **Adicionar as mudanças ao Git:**
+   ```sh
+   git add .
+   ```
+
+2. **Fazer o commit das mudanças:**
+   ```sh
+   git commit -m "Corrige caminhos relativos e estrutura do projeto"
+   ```
+
+3. **Empurrar as mudanças para o repositório remoto:**
+   ```sh
+   git push origin main
+   ```
+
+4. **Fazer o deploy para o GitHub Pages:**
+   ```sh
+   npm run deploy
+   ```
+
+### Configurações do GitHub Pages
+
+1. Vá para a página do repositório no GitHub.
+2. Clique na aba "Settings" (Configurações).
+3. Role para baixo até a seção "Pages".
+4. Em "Source", selecione a branch `gh-pages` e a pasta `/` (raiz).
+5. Clique em "Save" (Salvar).
+
+### Acessar o Seu Site
+
+Após alguns minutos, seu site estará disponível em `https://<seu-usuario>.github.io/<nome-do-repositorio>/`.
+
+Substitua `<seu-usuario>` pelo seu nome de usuário no GitHub e `<nome-do-repositorio>` pelo nome do repositório.
+
+Se precisar de mais ajuda, sinta-se à vontade para perguntar!
